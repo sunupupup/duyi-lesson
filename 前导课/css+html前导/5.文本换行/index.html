@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .one-line {
+      width: 200px;
+      line-height: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      /* 文字溢出三件套 */
+      white-space: nowrap; /* 不换行 */
+      overflow: hidden;
+      text-overflow: ellipsis; /* 文字溢出，用省略号显示 */
+    }
+
+    .two-line {
+      width: 200px;
+      line-height: 20px;
+      height: 40px;
+      border: 1px solid #000;
+      /* 文字溢出三件套 */
+      overflow: hidden;
+      text-overflow: ellipsis; /* 文字溢出，用省略号显示 */
+    }
+
+    .bk-img {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #000;
+      /* 只设置图片，如果容器不够大，只会显示图片的左上角一部分 */
+      background-image: url('https://nie.res.netease.com/r/pic/20240104/77d97d29-176a-4d6a-91e8-af6eb1508b1b.jpg');
+      /* 设置图片的宽高 如果只设置一个 会按照比例缩放 */
+      background-size: 100px;
+      /* 图片不足整个容器空间的话 默认是repeat，往右、往下，两个方向repeat*/
+      background-repeat: no-repeat;
+      /* 如果想要图片居中 */
+      background-position: center;
+      background-position: 50% 50%;
+    }
+
+    /* .yys {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-decoration: none;
+      background-image: url('https://nie.res.netease.com/r/pic/20240104/77d97d29-176a-4d6a-91e8-af6eb1508b1b.jpg');
+      background-size: 200px;
+
+      background-repeat: no-repeat;
+      text-indent: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+    } */
+
+    .yys2 {
+      display: inline-block;
+      width: 200px;
+      height: 0px;
+      padding-top: 100px;
+      text-decoration: none;
+      background-image: url('https://nie.res.netease.com/r/pic/20240104/77d97d29-176a-4d6a-91e8-af6eb1508b1b.jpg');
+      background-size: 200px 100px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+  </style>
+  <body>
+    <p class="one-line">
+      这是很长的文字, 这是很长的文字, 这是很长的文字, 这是很长的文字,
+    </p>
+
+    <p class="two-line">
+      要计算好容器高度和line height之间的关系, 这是多行的文字, 这是多行的文字,
+      这是多行的文字, 这是多行的文字, 这是多行的文字
+    </p>
+
+    <div class="bk-img"></div>
+
+    <!-- <a class="yys" href="#">yys site</a> -->
+
+    <a class="yys2" href="#">yys site</a>
+  </body>
+</html>
