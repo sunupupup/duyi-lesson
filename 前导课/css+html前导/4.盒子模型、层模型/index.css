@@ -1,0 +1,15 @@
+.text-demo {
+  width: 200px;
+  border: 1px solid #f40;
+  text-indent: 2em;
+  text-decoration: underline;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  padding: 0 100px;
+  border: 1px solid orange;
+  background-color: orange;
+  padding: 0px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        color: #424242;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .father {
+        width: 100px;
+        height: 100px;
+        margin: 100px;
+        background-color: black;
+      }
+
+      .son {
+        width: 50px;
+        height: 50px;
+        margin-left: 50px;
+        margin-top: 50px;
+        background-color: #fcc;
+      }
+
+      .pre {
+        width: 100px;
+        height: 100px;
+        background-color: #ccf;
+        margin-bottom: 100px;
+      }
+      .next {
+        width: 100px;
+        height: 100px;
+        margin-top: 100px;
+        background-color: #ffc;
+      }
+
+      .wrapper {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .box-wrapper {
+        border: 2px solid black;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: black;
+        color: #fff;
+        float: left;
+      }
+
+      .box-wrapper::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .nav::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .nav .item {
+        float: left;
+        padding-left: 10px;
+        height: 30px;
+        line-height: 30px;
+      }
+
+      .nav .item a {
+        /* 是因为想设置a标签的高度，但是a标签原始是inline的 */
+        display: inline-block;
+        padding: 0px 5px;
+        height: 30px;
+        color: #f40;
+      }
+
+      .nav .item a:hover {
+        color: #fff;
+        background-color: #f40;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+
+    <!-- <br />
+    <div class="wrapper"><div class="pre"></div></div>
+    <div class="wrapper"><div class="next"></div></div> -->
+
+    <br /><br /><br />
+
+    <div class="box-wrapper">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <br />
+    <ul class="nav">
+      <li class="item"><a href="#">淘宝</a></li>
+      <li class="item"><a href="#">聚划算</a></li>
+      <li class="item"><a href="#">天猫超市</a></li>
+    </ul>
+    <!-- 测试清除浮动流 -->
+    <div>123</div>
+  </body>
+</html>
