@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="服装" />
+    <meta name="description" content="这是你最喜欢的衣服" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <style>
+      /* * {
+        margin: 0px;
+        padding: 0px;
+      } */
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        float: left;
+        padding: 10px 10px;
+        color: #f40;
+        height: 25px;
+        line-height: 25px;
+      }
+
+      ul li:hover {
+        background-color: #f40;
+        color: #fff;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>有序列表 type表示前缀类型 reversed表示倒序 start表示从多少开始排</p>
+    <ol type="i" reversed start="114">
+      <li>ant1</li>
+      <li>ant2</li>
+      <li>ant3</li>
+    </ol>
+    <br />
+    <p>无序列表</p>
+    <ul type="circle">
+      <li>超市</li>
+      <li>厕所</li>
+      <li>医院</li>
+    </ul>
+    <br />
+    <div
+      style="
+        width: 0px;
+        height: 0px;
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid #0f4;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+      "
+      id="red"
+    ></div>
+    <a href="#red">go to red</a>
+    <br />
+    <a href="tel:10086">call </a>
+    <br />
+    <a href="mailto: 2293261394@qq.com">mail </a>
+    <br />
+    <a href="javascript: while(1){alert(1)}">js 死循环</a>
+
+    <br />
+    <form method="get" action="https://127.0.0.1:3000">
+      username: <input type="text" name="username" placeholder="请输入名字" />
+      <br />
+      username2:
+      <input
+        type="text"
+        name="username2"
+        style="color: #999"
+        value="请输入名字"
+        onfocus="if(this.value == '请输入名字') {this.value = ''; this.style= 'color: #424224'}"
+        onblur="if(this.value == '') {this.value = '请输入名字'; this.style= 'color: #999'}"
+      />
+      <br />
+      password:
+      <input type="password" name="password" placeholder="请输入密码" />
+      <br />
+
+      单选框喜欢的人
+      <br />
+      <!-- name变成同一个 就变成了单选 -->
+      1.jsr <input type="radio" name="love" value="jsr" checked />
+      <br />
+      2.ttt <input type="radio" name="love" value="ttt" />
+      <br />
+      3.afg <input type="radio" name="love" value="afg" />
+      <br />
+
+      多选框喜欢的人
+      <br />
+      <!-- name变成同一个 就变成了单选 -->
+      <!-- 传过去的数据: love2=jsr2&love2=ttt2&love2=afg2 -->
+      1.jsr <input type="checkbox" name="love2" value="jsr2" checked />
+      <br />
+      2.ttt <input type="checkbox" name="love2" value="ttt2" />
+      <br />
+      3.afg <input type="checkbox" name="love2" value="afg2" />
+      <br />
+
+      <select name="home">
+        <!-- 有value已value为内容，没有的话已content为内容 -->
+        <option value="南京">南京</option>
+        <option value="北京">北京</option>
+      </select>
+      <input type="submit" value="login" />
+    </form>
+  </body>
+</html>
