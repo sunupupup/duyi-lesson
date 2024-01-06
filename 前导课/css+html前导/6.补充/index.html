@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      height: 100px;
+      background-color: #aaa;
+    }
+
+    .inner {
+      width: 800px;
+      height: 100px;
+      background-color: #f40;
+      margin: 0px auto;
+    }
+
+    span {
+      font-size: 50px;
+    }
+
+    .demo {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: #f40;
+      vertical-align: bottom;
+    }
+
+    .parent {
+      padding: 20px;
+      border: 1px solid #000;
+    }
+
+    .child {
+      background-color: aqua;
+      float: left;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="inner"></div>
+    </div>
+
+    <div>我最帅<span>吗？</span></div>
+
+    <p>特殊情况</p>
+    <span class="demo">123</span>456
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
