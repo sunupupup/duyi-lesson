@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <script>
+      function debounce(fn, duration) {
+        var timeId;
+        return function () {
+          clearTimeout(timeId);
+          // 将该函数的this传递到fn
+          var that = this;
+          // 将该函数的参数，全部传递给fn
+          var args = Array.prototype.slice.call(arguments, 0);
+          timeId = setTimeout(function () {
+            fn.apply(that, args);
+          }, duration);
+        };
+      }
+      //fn 的 this 要和 debounce 函数里面的this 指向相同
+      const onkeyup = debounce(function (e) {
+        console.log('用户有按键耗时操作', this.value, e);
+      }, 2000);
+      var input = document.querySelector('input');
+      input.addEventListener('keyup', onkeyup);
+    </script>
+  </body>
+</html>

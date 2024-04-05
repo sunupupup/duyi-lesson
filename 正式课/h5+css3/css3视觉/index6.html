@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+        color: #666;
+      }
+
+      .box {
+        margin: auto;
+
+        height: 0px;
+        width: 0px;
+        border: 100px solid;
+        border-color: transparent transparent #579ef8 transparent;
+        transition: all 0.2s linear;
+
+        transform-origin: center 150px;
+      }
+
+      .box:hover {
+        /* 方法1： 把上面的border移动下去 */
+        /* border-color: #579ef8 transparent transparent transparent;
+        transform: translateY(100px); */
+
+        /* 放法2: 把原来的三角旋转 */
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <p>鼠标移上去试一试</p>
+    <p>下拉列表的小三角就是这个效果</p>
+    <p>颜色值: #579ef8</p>
+  </body>
+</html>
