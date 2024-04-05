@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #666;
+        text-align: center;
+      }
+
+      .box {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        border-radius: 50%;
+
+        transition: all 0.4s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="ball"></div>
+    <p>点击位置，移动小球</p>
+    <p>需要js配合</p>
+    <script>
+      const ball = document.querySelector('#ball');
+      window.onclick = function (e) {
+        console.log(e);
+        const x = e.clientX - 15;
+        const y = e.clientY - 15;
+        // 会造成reflow
+        // ball.style.top = y + 'px';
+        // ball.style.left = x + 'px';
+
+        // 只会引起repaint
+        ball.style.transform = `translate(${x}px,${y}px)`;
+      };
+    </script>
+  </body>
+</html>

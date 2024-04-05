@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      .bell {
+        margin: auto;
+        background-image: url(./bell.png);
+        width: 59px;
+        height: 107px;
+        transform-origin: center top;
+        animation: bell 0.4s infinite ease-in-out alternate;
+      }
+
+      @keyframes bell {
+        from {
+          transform: rotate(-40deg);
+        }
+        to {
+          transform: rotate(40deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="./bell.png" alt="" class="bell" /> -->
+    <div class="bell"></div>
+  </body>
+</html>
