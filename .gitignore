@@ -1,3 +1,9 @@
 *.pdf
 
 node_modules
+
+# 这个表示忽略任意位置 test-dir 路径下的所有文件
+test-dir/*
+
+# 这个表示忽略根目录 test-dir 路径下的所有文件
+/test-dir/*
