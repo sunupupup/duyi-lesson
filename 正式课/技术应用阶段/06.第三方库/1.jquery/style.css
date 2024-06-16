@@ -133,3 +133,8 @@ div.del {
   font-size: 21px;
   font-weight: bolder;
 }
+
+.list img {
+  width: 100px;
+  height: 80px;
+}
