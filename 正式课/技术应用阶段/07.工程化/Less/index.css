@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  color: #008c8c;
+}
+.list li {
+  margin: 1em;
+}
+.list li:nth-child(1) {
+  background-color: #f40;
+  color: #fff;
+}
+.list li:hover {
+  background-color: #008c8c;
+  color: #fff;
+}
+.a {
+  border-radius: 10px;
+}
+.b {
+  border-radius: 5px;
+}
+._content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 

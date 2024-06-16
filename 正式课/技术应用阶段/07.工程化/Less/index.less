@@ -1,0 +1,46 @@
+@green: #008c8c;
+@danger: #f40;
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  color: @green;
+  li {
+    &:nth-child(1) {
+      background-color: @danger;
+      color: #fff;
+    }
+    margin: 1em;
+    &:hover {
+      background-color: @green;
+      color: #fff;
+    }
+  }
+}
+
+._round(@r: 5px) {
+  border-radius: @r;
+}
+
+.a {
+  ._round(10px);
+}
+.b {
+  ._round( );
+}
+
+//弹性盒子居中效果
+._content-center {
+  display: flex;
+  // 横向居中
+  justify-content: center;
+  // 纵向居中
+  align-items: center;
+}
+
+.container {
+  ._content-center();
+}
+
+/* 普通的css注释 */
+// less额外的注释
